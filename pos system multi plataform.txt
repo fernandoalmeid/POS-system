@@ -1,0 +1,146 @@
+pos system multi plataform ( Linux windows and ios ) 
+
+electron react typescript node.js mongoDB nongoose & electron builder 
+
+
+Layer and technology 
+
+Desktop app - electron
+UI - react + typescript 
+local backend - node.js
+database - mongoDB
+orm - mongoose
+packaging - electron builder 
+
+atchitecture 
+
+electron
+	|- main process
+	|- renderer ( react ui) 
+
+node.js (backend)
+
+mongodb
+	|- local mongodb
+	|- optional atlas sync
+
+hardawere layer 
+	|- barcode scanner
+	|- recipt printer 
+	|- cash drawer 
+
+
+important mongodb decision
+
+local ( offline ) or cloud sync 
+
+project stucture 
+
+pos system
+|- electron 
+|- backend 
+|- renderer 
+|- database
+|- printer
+|- barcode
+|- sync
+
+
+
+
+receipts - 
+
+3 receipts options - email sms or paper 
+
+paper use the printer 
+
+sms get the client phone number and send the text with the item's that the client had bought the price of ea and the total price on the end it should 
+give the item's in a list and the on the lest line total : xxxxx the email option send the receipt in pdf format by email 
+
+
+
+
+
+pos-system
+│
+├── electron
+│
+├── backend
+│   ├── sales
+│   ├── inventory
+│   ├── customers
+│   ├── auth
+│   ├── reports
+│   └── receipts
+│       ├── paper
+│       ├── sms
+│       ├── email
+│       ├── pdf
+│       └── templates
+│
+├── renderer
+│   ├── pages
+│   ├── components
+│   ├── modals
+│   ├── services
+│   └── store
+│
+├── database
+│   ├── mongodb
+│   ├── models
+│   ├── migrations
+│   └── seed
+│
+├── printer
+│   ├── thermal
+│   ├── escpos
+│   ├── cashdrawer
+│   └── queue
+│
+├── barcode
+│   ├── scanner
+│   ├── parser
+│   └── generator
+│
+├── notifications
+│   ├── email
+│   │   ├── sendgrid
+│   │   ├── smtp
+│   │   └── templates
+│   │
+│   └── sms
+│       ├── twilio
+│       ├── templates
+│       └── queue
+│
+├── sync
+│   ├── offline
+│   ├── upload
+│   ├── download
+│   ├── queue
+│   └── resolver
+│
+├── shared
+│   ├── utils
+│   ├── constants
+│   ├── interfaces
+│   └── validators
+│
+├── config
+│
+├── logs
+│
+├── tests
+│
+├── .env
+├── package.json
+├── tsconfig.json
+└── README.md
+
+
+
+
+
+
+
+
